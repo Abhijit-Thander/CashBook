@@ -2,6 +2,8 @@
   "expo": {
     "name": "Cash-Book",
     "slug": "Cash-Book",
+    "scheme": "your-app-scheme",
+    "description": "A simple cash book application to manage your finances.",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
