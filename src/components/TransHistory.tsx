@@ -8,6 +8,7 @@ const TransHistory = () => {
     <View style={styles.container}>
       <Text style={styles.title}>Transaction History</Text>
       <AddButtton />
+
       <History />
       {/* Placeholder for transaction history content */}
     </View>

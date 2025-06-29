@@ -3,9 +3,9 @@ import { View, Text, StyleSheet, Image } from "react-native";
 
 interface TransactionItemProps {
   item: {
-    type: string;
-    profile: string;
-    name: string;
+    type?: string;
+    profile?: string;
+    user: string;
     date: string;
     amount: number;
   };
@@ -41,7 +41,7 @@ export default function TransactionItem({ item }: TransactionItemProps) {
         <Image source={{ uri: item.profile }} style={styles.profileImage} />
 
         <View style={styles.userInfo}>
-          <Text style={styles.userName}>{item.name}</Text>
+          <Text style={styles.userName}>{item.user}</Text>
           <Text style={styles.date}>{formatDate(item.date)}</Text>
         </View>
       </View>

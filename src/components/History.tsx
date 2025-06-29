@@ -1,14 +1,16 @@
-import { View, Text, StyleSheet, Image, FlatList } from "react-native";
+import { FlatList } from "react-native";
 import React from "react";
-import { transaction } from "../utils/TransactionData";
+import { transactionData } from "../utils/TransactionData";
 import TransactionItem from "./TransactionItem";
 
 const History = () => {
+  // const { transaction } = useTransaction();
+
   return (
     <FlatList
-      data={transaction.map(({ user, amount, ...rest }) => ({
+      data={transactionData.map(({ user, amount, ...rest }) => ({
         ...rest,
-        name: user,
+        user,
         amount: Number(amount),
       }))}
       renderItem={({ item }) => <TransactionItem item={item} />}

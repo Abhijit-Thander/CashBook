@@ -6,6 +6,8 @@ import { Stack } from "expo-router";
 import { FontAwesome5 } from "@expo/vector-icons";
 import { StatusBar } from "expo-status-bar";
 
+import { useTransaction } from "../../provider/TransactionProvider";
+
 const HomeScreen = () => {
   const HeaderRight = () => (
     <FontAwesome5
