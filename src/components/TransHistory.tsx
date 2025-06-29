@@ -1,4 +1,4 @@
-import { FlatList, StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View } from "react-native";
 import React from "react";
 import History from "./History";
 import AddButtton from "./AddButtton";
@@ -14,7 +14,7 @@ const TransHistory = () => {
   );
 };
 
-export default TransHistory;  
+export default TransHistory;
 
 const styles = StyleSheet.create({
   container: {

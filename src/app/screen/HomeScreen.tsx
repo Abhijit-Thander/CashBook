@@ -1,12 +1,37 @@
 import { StyleSheet, Text, View } from "react-native";
 import React from "react";
 import Feather from "@expo/vector-icons/Feather";
-import TransHistory from "./TransHistory";
+import TransHistory from "../../components/TransHistory";
+import { Stack } from "expo-router";
+import { FontAwesome5 } from "@expo/vector-icons";
+import { StatusBar } from "expo-status-bar";
 
 const HomeScreen = () => {
+  const HeaderRight = () => (
+    <FontAwesome5
+      name="bell"
+      size={24}
+      color="#fff"
+      style={{ marginRight: 16 }}
+    />
+  );
+
   return (
     <>
       <View style={{ height: "40%", backgroundColor: "#fff" }}>
+        <Stack.Screen
+          options={{
+            title: "Welcome 👋",
+            headerTransparent: true,
+            headerTitleStyle: {
+              color: "#fff",
+              fontWeight: "bold",
+              fontSize: 20,
+            },
+            headerTintColor: "#fff",
+            headerRight: HeaderRight,
+          }}
+        />
         <View style={styles.container}>
           <View style={styles.totalBalanceContainer}>
             <Text style={styles.totalBalanceText}>Total Balance</Text>
@@ -33,6 +58,7 @@ const HomeScreen = () => {
         </View>
       </View>
       <TransHistory />
+      <StatusBar style="light" />
     </>
   );
 };
@@ -42,9 +68,9 @@ export default HomeScreen;
 const styles = StyleSheet.create({
   container: {
     width: "100%",
-    height: "75%",
-    borderBottomLeftRadius: 60,
-    borderBottomRightRadius: 60,
+    height: "90%",
+    borderBottomLeftRadius: 70,
+    borderBottomRightRadius: 70,
     alignItems: "center",
     backgroundColor: "#3b8e88",
     position: "relative",
@@ -59,7 +85,7 @@ const styles = StyleSheet.create({
     shadowColor: "#ffffffd0",
     width: "90%",
     position: "absolute",
-    top: "50%",
+    top: "55%",
     transform: [{ translateY: -50 }], // Center the container vertically
   },
   totalBalanceText: {

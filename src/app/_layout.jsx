@@ -9,7 +9,17 @@ export default function RootLayout() {
         name="index"
         options={{
           title: "Welcome👋",
-          headerRight: HeaderRight,
+        }}
+      />
+
+      <Stack.Screen
+        name="screen/AddTransaction"
+        options={{
+          title: "Add Transaction",
+          headerTransparent: true,
+          headerTitleStyle: { color: "#fff", fontWeight: "bold", fontSize: 18 },
+          headerTintColor: "#fff",
+          headerTitleAlign: "center",
         }}
       />
     </Stack>
@@ -17,11 +27,3 @@ export default function RootLayout() {
 }
 
 // Extracted for readability
-const HeaderRight = () => (
-  <FontAwesome5
-    name="bell"
-    size={24}
-    color="black"
-    style={{ marginRight: 16 }}
-  />
-);

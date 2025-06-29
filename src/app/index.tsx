@@ -1,12 +1,13 @@
 import { StyleSheet, Text, View } from "react-native";
 import React from "react";
-import HomeScreen from "../components/HomeScreen";
+import HomeScreen from "../app/screen/HomeScreen";
 import TransactionProvider from "../provider/TransactionProvider";
+import Onboarding from "./screen/OnBoarding";
 
 const index = () => {
   return (
     <TransactionProvider>
-      <HomeScreen />
+      {true ? <Onboarding /> : <HomeScreen />}
     </TransactionProvider>
   );
 };

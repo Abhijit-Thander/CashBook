@@ -9,7 +9,7 @@ const AddButtton = () => {
   return (
     <TouchableOpacity
       style={styles.fab}
-      onPress={() => router.push("AddTransaction")}
+      onPress={() => router.push("/screen/AddTransaction")}
     >
       <Feather name="plus" size={24} color="#fff" />
     </TouchableOpacity>

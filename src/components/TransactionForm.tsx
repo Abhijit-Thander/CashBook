@@ -117,8 +117,8 @@ export default function AddTransactionForm({
 
 const styles = StyleSheet.create({
   container: {
-    marginTop: 40,
-    padding: 20,
+    padding: 10,
+    borderRadius: 10,
   },
   label: {
     fontSize: 16,
